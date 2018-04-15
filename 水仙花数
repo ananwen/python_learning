@@ -1,0 +1,23 @@
+while True:
+
+
+    num = input("请输入一个三位数：")
+    num = int(num)
+
+    if not (100 <= num <= 999):
+        print("输入的数字有误")
+        exit()
+
+    baiwei = num // 100
+    shiwei = num % 100 // 10
+    gewei = num % 10
+
+    result = (baiwei ** 3 + shiwei ** 3 +gewei ** 3 == num)
+    if result:
+        print("%d是水仙花数" % num)
+    else:
+        print("%d不是水仙花数" % num)
+    s = input("是否想退出（Y）：")
+    if s == 'Y':
+        break
+        
